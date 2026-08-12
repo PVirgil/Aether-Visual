@@ -10,57 +10,6 @@
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/styles.css">
 
-<style>
-/*
- * INDEX.HTML VISUAL OVERRIDES
- * These intentionally override styles.css without changing
- * the rest of the multi-file project.
- */
-
-
-/* ─────────────────────────────────────────────
-   1. INTERFACE
-
-   Keep the letters genuinely hollow/transparent.
-   Only the outer glyph stroke is rendered.
-   ───────────────────────────────────────────── */
-
-.hero-title .outline {
-    color: transparent !important;
-    -webkit-text-fill-color: transparent !important;
-
-    -webkit-text-stroke-width: 1px !important;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.40) !important;
-
-    paint-order: normal !important;
-    background: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    filter: none !important;
-}
-
-
-/* ─────────────────────────────────────────────
-   2. HERO DESCRIPTION
-
-   Just a little more breathing room below
-   INTERFACE — not a large separation.
-   ───────────────────────────────────────────── */
-
-.hero-copy {
-    margin-top: 30px !important;
-}
-
-
-/* Slightly tighter on smaller displays. */
-
-@media (max-width: 850px) {
-    .hero-copy {
-        margin-top: 24px !important;
-    }
-}
-
-</style>
 </head>
 <body>
 <canvas id="gl" aria-hidden="true"></canvas>
