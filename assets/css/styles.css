@@ -13,8 +13,8 @@ canvas{display:block}#gl,#dust{position:fixed;inset:0;width:100%;height:100%;poi
 .cursor,.cursor-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:1200;border-radius:50%;transform:translate(-50%,-50%);mix-blend-mode:difference}.cursor{width:6px;height:6px;background:#fff}.cursor-ring{width:34px;height:34px;border:1px solid rgba(255,255,255,.7);transition:.25s}.cursor-ring.big{width:78px;height:78px;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
 .hud{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;justify-content:space-between;align-items:center;padding:22px 26px;font-size:10px;letter-spacing:.19em;text-transform:uppercase;mix-blend-mode:difference;color:#fff}.hud>div{display:flex;align-items:center;gap:14px}.hud span{opacity:.58}.hud-orbit{width:28px;height:28px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:inline-block;animation:rotate 8s linear infinite}.hud-orbit:after{content:"";display:block;width:5px;height:5px;border-radius:50%;background:#fff;margin:1px auto;box-shadow:0 0 12px #fff}@keyframes rotate{to{transform:rotate(360deg)}}
 .scene{min-height:100svh;position:relative;display:grid;place-items:center;padding:110px 28px}.hero{min-height:105svh;overflow:hidden}.hero-inner{width:min(1300px,100%);text-align:center;position:relative;z-index:5}.micro{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.48)}
-.hero-title{margin:28px 0 26px;font-size:clamp(76px,14.7vw,232px);letter-spacing:-.09em;line-height:.72;font-weight:800}.hero-title span{display:block}.hero-title .solid{background:linear-gradient(95deg,#fff 6%,#d4ceff 31%,#93efff 57%,#ffb5e6 79%,#fff 96%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 48px rgba(123,103,255,.12))}.hero-title .outline{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.36);transform:translateY(.11em)}
-.hero-copy{max-width:670px;margin:0 auto;color:rgba(255,255,255,.52);font-size:15px;line-height:1.7}.hero-orbit{position:absolute;left:50%;top:49%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%)}.o1{width:min(73vw,900px);aspect-ratio:1;border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 0 110px rgba(123,100,255,.05),0 0 120px rgba(75,214,255,.04);animation:rotateCenter 28s linear infinite}.o1:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:#fff;left:50%;top:-6px;box-shadow:0 0 24px #fff,0 0 70px #8b7bff}.o2{width:min(58vw,730px);aspect-ratio:1;border:1px dashed rgba(255,255,255,.08);animation:rotateCenterReverse 38s linear infinite}.o3{width:min(42vw,530px);aspect-ratio:1;border:1px solid rgba(132,218,255,.08);box-shadow:0 0 70px rgba(120,95,255,.05);animation:rotateCenter 54s linear infinite}
+.hero-title{margin:28px 0 0;font-size:clamp(76px,14.7vw,232px);letter-spacing:-.09em;line-height:.72;font-weight:800}.hero-title span{display:block}.hero-title .solid{background:linear-gradient(95deg,#fff 6%,#d4ceff 31%,#93efff 57%,#ffb5e6 79%,#fff 96%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 48px rgba(123,103,255,.12))}.hero-title .outline{font-family:Arial,Helvetica,sans-serif;font-weight:700;letter-spacing:-.075em;color:transparent;-webkit-text-fill-color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.36);transform:translateY(.11em)}
+.hero-copy{max-width:670px;margin:0 auto;color:rgba(255,255,255,.52);font-size:15px;line-height:1.7}.hero-copy-spacer{height:78px;width:100%;pointer-events:none}.hero-orbit{position:absolute;left:50%;top:49%;border-radius:50%;pointer-events:none;transform:translate(-50%,-50%)}.o1{width:min(73vw,900px);aspect-ratio:1;border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 0 110px rgba(123,100,255,.05),0 0 120px rgba(75,214,255,.04);animation:rotateCenter 28s linear infinite}.o1:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:#fff;left:50%;top:-6px;box-shadow:0 0 24px #fff,0 0 70px #8b7bff}.o2{width:min(58vw,730px);aspect-ratio:1;border:1px dashed rgba(255,255,255,.08);animation:rotateCenterReverse 38s linear infinite}.o3{width:min(42vw,530px);aspect-ratio:1;border:1px solid rgba(132,218,255,.08);box-shadow:0 0 70px rgba(120,95,255,.05);animation:rotateCenter 54s linear infinite}
 @keyframes rotateCenter{to{transform:translate(-50%,-50%) rotate(360deg)}}@keyframes rotateCenterReverse{to{transform:translate(-50%,-50%) rotate(-360deg)}}
 .descend{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;color:rgba(255,255,255,.35)}.descend span{display:block;width:1px;height:46px;margin:13px auto 0;background:linear-gradient(#fff,transparent);animation:descend 2s ease-in-out infinite}@keyframes descend{50%{opacity:.25;transform:scaleY(.62)}}
 .content-wide{width:min(1220px,100%);margin:auto}.statement{margin:16px 0 0;max-width:1150px;font-size:clamp(54px,8.5vw,128px);letter-spacing:-.068em;line-height:.91;font-weight:600}.statement em{font-style:normal;color:rgba(255,255,255,.23)}.statement.small{font-size:clamp(42px,5.7vw,82px);max-width:720px}
@@ -28,68 +28,4 @@ canvas{display:block}#gl,#dust{position:fixed;inset:0;width:100%;height:100%;poi
 @media(max-width:850px){body{cursor:auto}.cursor,.cursor-ring{display:none}.hud{padding:18px 16px}.hud div:first-child span{display:none}.scene{padding-inline:18px}.hero-title{font-size:clamp(74px,21vw,150px)}.o1{width:94vw}.o2{width:78vw}.o3{width:58vw}.portal-grid{grid-template-columns:1fr}.portal-card,.portal-card:nth-child(2),.portal-card.wide{grid-column:auto;min-height:510px}.strata-wrap{grid-template-columns:1fr;gap:48px}.ribbon{height:135px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-.field-contour{position:absolute;inset:8%;border-radius:46% 54% 51% 49%/53% 43% 57% 47%;border:1px solid rgba(255,255,255,.10);filter:drop-shadow(0 0 24px rgba(132,115,255,.10));animation:contourMorph 8s ease-in-out infinite alternate}
-.field-contour:before,.field-contour:after{content:"";position:absolute;border-radius:47% 53% 44% 56%/58% 45% 55% 42%;border:1px solid rgba(255,255,255,.055)}
-.field-contour:before{inset:10% 13%;transform:rotate(19deg);animation:contourDrift 11s ease-in-out infinite alternate}
-.field-contour:after{inset:22% 18%;border-color:rgba(112,224,255,.07);transform:rotate(-27deg);animation:contourDrift 14s ease-in-out infinite alternate-reverse}
-.energy-wisp{position:absolute;width:72%;height:26%;left:14%;top:37%;border-radius:50%;border-top:1px solid rgba(255,255,255,.11);filter:drop-shadow(0 0 14px rgba(119,102,255,.16));transform:rotate(-14deg);animation:wispFloat 7s ease-in-out infinite alternate}
-.energy-wisp:after{content:"";position:absolute;width:54%;height:80%;right:3%;top:28%;border-radius:50%;border-bottom:1px solid rgba(109,225,255,.075);transform:rotate(23deg)}
-@keyframes contourMorph{to{transform:rotate(7deg) scale(1.035);border-radius:55% 45% 46% 54%/44% 57% 43% 56%}}
-@keyframes contourDrift{to{transform:rotate(31deg) scale(1.04) translate3d(5px,-7px,0)}}
-@keyframes wispFloat{to{transform:rotate(-7deg) translate3d(10px,-8px,0) scaleX(1.05);opacity:.55}}
-
-/* =========================================================
-   FINAL HERO FIX
-   - Keeps INTERFACE as the original font/text
-   - Avoids -webkit-text-stroke internal overlap artifacts
-   - Positions the description independently from hero centering
-   ========================================================= */
-
-/* Preserve the original title geometry. */
-.hero-title{
-  letter-spacing:-.09em;
-}
-
-/*
-  Transparent outline made from the glyph's composited alpha mask
-  rather than -webkit-text-stroke. This keeps the live background
-  visible through the letters while avoiding stroke seams at joined
-  parts of glyphs such as the A crossbar.
-*/
-.hero-title .outline{
-  color:transparent;
-  -webkit-text-fill-color:transparent;
-  -webkit-text-stroke:0 transparent;
-  text-shadow:
-    -0.8px -0.8px 0 rgba(255,255,255,.42),
-     0     -0.8px 0 rgba(255,255,255,.42),
-     0.8px -0.8px 0 rgba(255,255,255,.42),
-    -0.8px  0     0 rgba(255,255,255,.42),
-     0.8px  0     0 rgba(255,255,255,.42),
-    -0.8px  0.8px 0 rgba(255,255,255,.42),
-     0      0.8px 0 rgba(255,255,255,.42),
-     0.8px  0.8px 0 rgba(255,255,255,.42);
-  transform:translateY(.11em);
-}
-
-/*
-  The paragraph is removed from normal flow, so moving it down does
-  not make the centered .hero-inner taller and does not pull the title up.
-  No transform is used here, leaving the existing .reveal transform free.
-*/
-.hero-copy{
-  max-width:670px;
-  width:min(670px,90vw);
-  margin:0 auto;
-  position:absolute;
-  top:calc(100% + 70px);
-  left:0;
-  right:0;
-}
-
-@media(max-width:850px){
-  .hero-copy{
-    top:calc(100% + 54px);
-  }
-}
-
+@media(max-width:850px){.hero-copy-spacer{height:56px}}
