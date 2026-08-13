@@ -119,3 +119,33 @@ canvas{display:block}#gl,#dust{position:fixed;inset:0;width:100%;height:100%;poi
   }
 }
 
+/* ===== Responsive / Kinetic Type refinements v2 ===== */
+
+/* Alternate Kinetic Type words: grey, white, grey, white... */
+.ribbon-track span:nth-child(odd){
+  color:rgba(255,255,255,.24) !important;
+  -webkit-text-fill-color:rgba(255,255,255,.24) !important;
+  -webkit-text-stroke-color:rgba(255,255,255,.24) !important;
+}
+.ribbon-track span:nth-child(even){
+  color:rgba(255,255,255,.92) !important;
+  -webkit-text-fill-color:rgba(255,255,255,.92) !important;
+  -webkit-text-stroke-color:rgba(255,255,255,.92) !important;
+}
+
+/*
+  Landscape phones: put DESCEND at the actual bottom edge.
+  The previous 8px bottom offset + shortened hero made it appear higher.
+*/
+@media (max-height:520px) and (orientation:landscape){
+  .descend{
+    position:absolute !important;
+    top:auto !important;
+    bottom:-24px !important;
+    font-size:8px !important;
+  }
+  .descend span{
+    height:14px !important;
+  }
+}
+
