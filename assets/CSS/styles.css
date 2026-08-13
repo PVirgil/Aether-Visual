@@ -60,3 +60,15 @@ canvas{display:block}#gl,#dust{position:fixed;inset:0;width:100%;height:100%;poi
     top: 54px;
   }
 }
+
+/* Hero description positioning */
+
+.hero-copy {
+  max-width: 670px;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(100% + 64px);
+  left: 50%;
+  width: min(670px, 90vw);
+  transform: translateX(-50%);
+}
