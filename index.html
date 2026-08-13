@@ -23,29 +23,93 @@
 <div class="hero-orbit o1"></div><div class="hero-orbit o2"></div><div class="hero-orbit o3"></div>
 <div class="hero-inner">
 <div class="micro reveal">A browser-made visual organism</div>
-<h1 class="hero-title reveal"><span class="solid">BEYOND</span><span class="outline">INTERFACE</span></h1>
+
+<h1 class="hero-title reveal">
+  <span class="solid">BEYOND</span>
+
+  <!--
+    INTERFACE is deliberately drawn as custom outline geometry rather than
+    browser text-stroke. The paths have no fill, so the animated background
+    remains visible through every letter. Each letter is constructed from
+    explicit strokes, preventing a font outline from producing doubled /
+    overlapping internal contours.
+  -->
+  <span class="interface-outline" aria-label="INTERFACE">
+    <svg class="interface-svg"
+         viewBox="0 0 1200 180"
+         role="img"
+         aria-labelledby="interfaceTitle"
+         preserveAspectRatio="xMidYMid meet">
+      <title id="interfaceTitle">INTERFACE</title>
+
+      <!-- I -->
+      <path d="M32 18 H142 M87 18 V162 M32 162 H142"/>
+
+      <!-- N -->
+      <path d="M174 162 V18 L304 162 V18"/>
+
+      <!-- T -->
+      <path d="M338 18 H478 M408 18 V162"/>
+
+      <!-- E -->
+      <path d="M510 18 V162 M510 18 H642 M510 90 H622 M510 162 H642"/>
+
+      <!-- R -->
+      <path d="M676 162 V18 H750
+               C806 18 826 45 826 72
+               C826 101 804 116 750 116
+               H676
+               M748 116 L832 162"/>
+
+      <!-- F -->
+      <path d="M864 162 V18 M864 18 H996 M864 90 H976"/>
+
+      <!-- A: single clean outline construction; no doubled glyph contours -->
+      <path d="M1016 162 L1074 18 L1132 162
+               M1038 108 H1110"/>
+
+      <!-- C/E-style terminal letter fitted into the original word width -->
+      <path d="M1190 43
+               C1174 24 1155 18 1138 18
+               C1098 18 1078 48 1078 90
+               C1078 132 1098 162 1138 162
+               C1157 162 1176 155 1190 138"/>
+    </svg>
+  </span>
+</h1>
+
+<!-- Real document-flow spacing; does not interfere with .reveal transforms. -->
+<div class="hero-copy-spacer" aria-hidden="true"></div>
+
 <p class="hero-copy reveal">No product. No service. No conversion. Only light, motion, space, tension, depth, rhythm, and memory.</p>
 </div>
 <div class="descend">DESCEND<span></span></div>
 </section>
+
 <section class="scene statement-scene" data-scene="2"><div class="content-wide reveal"><div class="micro">I / VOLUME</div><p class="statement">The screen is not a surface. <em>It is a volume waiting to be opened.</em></p></div></section>
+
 <section class="ribbon-world" data-scene="3">
 <div class="ribbon ribbon-a"><div class="ribbon-track"><span>LIGHT</span><span>SPACE</span><span>MOTION</span><span>MEMORY</span><span>LIGHT</span><span>SPACE</span><span>MOTION</span><span>MEMORY</span></div></div>
 <div class="ribbon ribbon-b"><div class="ribbon-track"><span>FORM</span><span>TIME</span><span>DEPTH</span><span>SILENCE</span><span>FORM</span><span>TIME</span><span>DEPTH</span><span>SILENCE</span></div></div>
 <div class="ribbon-center reveal">II / KINETIC TYPE</div>
 </section>
+
 <section class="scene portal-scene" data-scene="4"><div class="portal-grid">
 <article class="portal-card reveal interactive"><div class="portal-art"><div class="orb orb-violet"></div><div class="field-contour"></div><div class="energy-wisp"></div><div class="scanlines"></div></div><div class="portal-meta"><strong>Violet Event</strong><span>Reactive field / 01</span></div></article>
 <article class="portal-card reveal interactive"><div class="portal-art"><div class="orb orb-cyan"></div><div class="field-contour"></div><div class="energy-wisp"></div><div class="scanlines"></div></div><div class="portal-meta"><strong>Blue Silence</strong><span>Depth study / 02</span></div></article>
 <article class="portal-card wide reveal interactive"><div class="portal-art"><div class="orb orb-rose"></div><div class="field-contour"></div><div class="energy-wisp"></div><div class="scanlines"></div></div><div class="portal-meta"><strong>Peripheral Glow</strong><span>Edge perception / 03</span></div></article>
 </div></section>
+
 <section class="scene poem-scene" data-scene="5"><p class="poem reveal">Beauty is not more. <span>It is the exact amount of impossibility required to make someone look twice.</span></p></section>
+
 <section class="scene strata-scene" data-scene="6"><div class="strata-wrap">
 <div class="reveal"><div class="micro">V / PRESENCE</div><p class="statement small">Motion should not decorate an object. <em>Motion should reveal that the object was alive all along.</em></p></div>
 <div class="strata interactive reveal"><div class="sl s1"></div><div class="sl s2"></div><div class="sl s3"></div><div class="sl s4"></div><div class="strata-core"></div></div>
 </div></section>
+
 <section class="scene finale" data-scene="7"><div class="finale-core"></div><div class="finale-rings"></div><div class="finale-copy reveal"><div class="infinity">∞</div><div class="micro">THERE IS NO END STATE</div></div></section>
 </main>
+
 <script src="assets/js/gl.js"></script><script src="assets/js/dust.js"></script><script src="assets/js/app.js"></script>
 </body>
 </html>
